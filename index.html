@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windy Mood</title>
+    <link rel="icon" href="favicon.png" type="png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+    // Predefine the array of media (both videos and images)
+    const media = [
+        { type: 'video', src: 'leaflight.mp4' },
+        { type: 'video', src: 'clouds.mp4' },
+        { type: 'video', src: 'tulipflower (1).mp4' },
+        { type: 'video', src: 'flowerbed.mp4' },
+        { type: 'video', src: 'sunset.mp4' }
+    ];
+
+    // Function to set a random background
+    function setRandomBackground() {
+        const randomIndex = Math.floor(Math.random() * media.length);
+        const container = document.querySelector('.container');
+        const selectedMedia = media[randomIndex];
+
+        if (selectedMedia.type === 'video') {
+            // Create a video element and set it as the background
+            const videoElement = document.createElement('video');
+            videoElement.src = selectedMedia.src;
+            videoElement.autoplay = true;
+            videoElement.muted = true;
+            videoElement.loop = true;
+            videoElement.style.position = 'absolute';
+            videoElement.style.top = '0';
+            videoElement.style.left = '0';
+            videoElement.style.width = '100%';
+            videoElement.style.height = '100%';
+            videoElement.style.objectFit = 'cover';
+            videoElement.style.zIndex = '-1';
+            
+            // Append the video to the container if not already there
+            if (!document.querySelector('video')) {
+                container.appendChild(videoElement);
+            }
+        } else {
+            // Apply a dark overlay to the image background
+            container.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('${selectedMedia.src}')`;
+            container.style.backgroundSize = 'cover';
+            container.style.backgroundPosition = 'center';
+        }
+    }
+
+    // Set random background when the page loads
+    window.onload = setRandomBackground;
+</script>
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="play-pause-btn animated" id="playPauseBtn"></div>
+        <h1 class="name">WINDY MOOD</h1>
+        <p id="wind-quote" class="wind-quote">"And it is He who sends the winds as good tidings before His mercy, and We send down from the sky pure water."</p>
+        <p id="wind-source" class="wind-source">Surah Al-Furqan (25:48)</p>
+        <audio id="windAudio" loop>
+            <source src="sound6.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Volume Control Slider -->
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" class="volume-slider">
+        
+        <p id="wind-quote" class="wind-quote"></p>
+        <p id="wind-source" class="wind-source"></p>
+        <a href="https://www.youtube.com/@ArtificialArtistofficial" target="_blank" class="youtube-btn">
+            <img src="yticon.png" alt="YouTube Icon" class="yticon"></a>
+    </div>
+
+    <script>
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const windAudio = document.getElementById('windAudio');
+        const volumeControl = document.getElementById('volumeControl');
+        let isPlaying = false;
+
+        // Play/Pause functionality
+        playPauseBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                windAudio.pause();
+                playPauseBtn.classList.remove('pause');
+                playPauseBtn.classList.add('play');
+            } else {
+                windAudio.play();
+                playPauseBtn.classList.remove('play');
+                playPauseBtn.classList.add('pause');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Volume Control functionality
+        volumeControl.addEventListener('input', (event) => {
+            windAudio.volume = event.target.value;
+        });
+    </script>
+</body>
+</html>

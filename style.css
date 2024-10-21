@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url() no-repeat center center/cover;
+}
+
+
+.volume-slider{
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+}
+
+
+    .volume-slider {
+        -webkit-appearance: none; /* Remove default slider appearance */
+        appearance: none;
+        width: 200px;
+        height: 5px;
+        background: white; /* Change the slider track color to white */
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Style for the slider thumb (the draggable part) */
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: white; /* Change the thumb color to white */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background: white; /* Change the thumb color to white */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+    }
+
+
+
+.name{
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 75px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Play/Pause Button Styling with Animation */
+.play-pause-btn {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: url('play-icon.png') no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+}
+
+.play-pause-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+.play-pause-btn.pause {
+    background: url('pause-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Add Simple Pulse Animation */
+.animated {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Wind Quote Styling */
+.wind-quote {
+    position: absolute;
+    bottom: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.wind-source {
+    position: absolute;
+    bottom: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.yticon{
+    width: 80px; 
+    height: 80px;
+}
+
+/* YouTube Button Styling */
+.youtube-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1px 1px;
+    }
+
+.youtube-btn:hover {
+    transform: translate(-50%, -10%) scale(1.05);
+    border-radius: 16px;
+    box-shadow: 20px 20px rgba(0.5);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url() no-repeat center center/cover;
+}
+
+
+.volume-slider{
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+}
+
+
+    .volume-slider {
+        -webkit-appearance: none; /* Remove default slider appearance */
+        appearance: none;
+        width: 220px;
+        height: 5px;
+        background: white; /* Change the slider track color to white */
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Style for the slider thumb (the draggable part) */
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: white; /* Change the thumb color to white */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background: white; /* Change the thumb color to white */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+    }
+
+
+
+.name{
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Play/Pause Button Styling with Animation */
+.play-pause-btn {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: url('play-icon.png') no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+}
+
+.play-pause-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+.play-pause-btn.pause {
+    background: url('pause-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Add Simple Pulse Animation */
+.animated {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Wind Quote Styling */
+.wind-quote {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.wind-source {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.yticon{
+    width: 80px; 
+    height: 80px;
+}
+
+/* YouTube Button Styling */
+.youtube-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1px 1px;
+    }
+
+.youtube-btn:hover {
+    transform: translate(-50%, -10%) scale(1.05);
+    border-radius: 16px;
+    box-shadow: 20px 20px rgba(0.5);
+}
+
+
+
+}
+
+@media (max-width: 480px) {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url() no-repeat center center/cover;
+}
+
+
+.volume-slider{
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+}
+
+
+    .volume-slider {
+        -webkit-appearance: none; /* Remove default slider appearance */
+        appearance: none;
+        width: 200px;
+        height: 5px;
+        background: white; /* Change the slider track color to white */
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Style for the slider thumb (the draggable part) */
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: white; /* Change the thumb color to white */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+    }
+
+    .volume-slider::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background: white; /* Change the thumb color to white */
+        border-radius: 50%; /* Make it circular */
+        cursor: pointer;
+    }
+
+
+
+.name{
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Play/Pause Button Styling with Animation */
+.play-pause-btn {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: url('play-icon.png') no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+}
+
+.play-pause-btn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+.play-pause-btn.pause {
+    background: url('pause-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Add Simple Pulse Animation */
+.animated {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Wind Quote Styling */
+.wind-quote {
+    position: absolute;
+    bottom: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.wind-source {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.yticon{
+    width: 60px; 
+    height: 60px;
+}
+
+/* YouTube Button Styling */
+.youtube-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1px 1px;
+    }
+
+.youtube-btn:hover {
+    transform: translate(-50%, -10%) scale(1.05);
+    border-radius: 16px;
+    box-shadow: 20px 20px rgba(0.5);
+}
+
+}
